@@ -66,8 +66,6 @@ in
     firefox
     gimp
     glibcLocales
-    i3lock
-    i3status
     kitty
     lastpass-cli
     networkmanagerapplet
@@ -75,7 +73,6 @@ in
     noto-fonts-cjk
     noto-fonts-emoji
     pavucontrol
-    rofi
     spotify
     steam
     thunar
@@ -85,7 +82,19 @@ in
     xclip
     xfce.xfce4-screenshooter
     xss-lock
+
+    # Sway / Wayland specific.
+    swaylock
+    swayidle
+    wl-clipboard
+    mako
+    rofi
   ];
+
+  wayland.windowManager.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true ;
+  };
 
   programs.direnv.enable = true;
   programs.direnv.enableNixDirenvIntegration = true;
